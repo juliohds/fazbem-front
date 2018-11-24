@@ -1,0 +1,18 @@
+.institutional {
+  &-background {
+    background-color: #f3eff5;
+    background-repeat: no-repeat;
+    background-image: url("");
+    background-size: 3397px 350vw;
+    background-position: top center;
+    @media (max-width: 767px) {
+      background-size: 1800px 450vw;
+    }
+    @media (min-width: 1600px) {
+      background-size: 3397px 5000px;
+    }
+  }
+  &-footer {
+    margin-top: calc(10vw + 100px);
+  }
+}

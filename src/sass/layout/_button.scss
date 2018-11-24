@@ -1,0 +1,42 @@
+button.btn-portal, .btn-portal{
+  padding: $buttonHeight;
+  border-radius: 50px;
+  font-size: $buttonFontSize;    
+  font-family: Nunito;
+  font-weight: bold;
+  //Sizes
+  &-extra-small{
+      @include size($buttonFontSize,0.2,false);
+  }
+  &-small{
+      @include size($buttonFontSize,0.1,false);
+  }
+  &-large{
+      @include size($buttonFontSize,0.5);
+  }
+  &-extra-large{
+      @include size($buttonFontSize,1)
+  }
+  //Styles
+  &-primary{
+      @include buttonColor($buttonPrimaryColor, $buttonPrimaryFontColor);
+  }
+  &-secundary{
+      @include buttonColor($buttonSecundaryColor, $buttonSecundaryFontColor);
+  }
+  &-outline{  
+      @include buttonColor(transparent, $buttonOutlineColor, $buttonOutlineColor, true, 0.1em);
+  }
+  &-private-person{
+      @include buttonColor($buttonPrivatePersonColor, $buttonPrivatePersonFontColor);
+  }
+  &-legal-entity{
+      @include buttonColor($buttonLegalEntityColor, $buttonLegalEntityFontColor);
+  }
+  &-contract{
+      @include buttonColor($buttonContractColor, $buttonContractFontColor);
+  }
+  &-progress{
+      @include buttonColor($buttonProgressColor, $buttonProgressFontColor);
+  }
+}
