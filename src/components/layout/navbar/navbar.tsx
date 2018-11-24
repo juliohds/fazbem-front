@@ -67,7 +67,7 @@ export const UnLoggedNavbar: React.SFC = () => (
         </NavLink>
       </NavItem>
       <NavItem className="header-li">
-        <NavLink className="header-item-text" to="/voce-emdia">
+        <NavLink className="header-item-text" to="/voce-voluntario">
           VOCÊ VOLUNTÁRIO
         </NavLink>
       </NavItem>

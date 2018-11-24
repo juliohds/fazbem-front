@@ -2,6 +2,8 @@ import * as React from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Institutional from "./pages/institutional";
+import VoceVoluntario from "./pages/vocevoluntario";
+
 import Login from "./pages/login";
 // import { Col } from "reactstrap";
 
@@ -24,6 +26,7 @@ const Routes: React.SFC = () => (
     <Switch>
       <Route exact={true} path="/" component={Institutional} />
       <Route path="/entrar" component={Login} />
+      <Route path="/voce-voluntario" component={VoceVoluntario} />
       {/*<Route path="/teams" component={TeamsPage} />
       <Route path="/home" component={IndexPage} /> */}
       <Route component={notFound} />

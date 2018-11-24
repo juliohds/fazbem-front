@@ -4,9 +4,12 @@
 @import "utils/variables";
 @import "base/mixin";
 @import "base/typography";
+@import "base/comun";
 @import "layout//button";
 @import "layout/footer";
 @import "layout/forms";
 @import "layout/header";
 @import "pages/institutional";
 @import "components/carrousel";
+
+@import "plugins/test";
