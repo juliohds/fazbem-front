@@ -61,6 +61,28 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
             </Col>
           </Row>
         </div>
+        <Row>
+          <Col md="6" className="text-center">
+            <Badge
+              href="#"
+              color="secondary"
+              pill={true}
+              style={{ fontSize: "26px", marginTop: "7px" }}
+            >
+              Alimentos Comuns
+            </Badge>
+          </Col>
+          <Col md="6" className="text-center">
+            <Badge
+              href="#"
+              color="secondary"
+              pill={true}
+              style={{ fontSize: "26px", marginTop: "7px" }}
+            >
+              Organicos e Naturais
+            </Badge>
+          </Col>
+        </Row>
         <Badge color="warning">CAfé da Manhã</Badge>
         <Row>
           <Col md="6">
@@ -264,8 +286,27 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
               </Col>
             </Row>
           </Col>
-
-          <Col md="6" className={`${this.state.showClass}`}>
+          <Col
+            md="6"
+            className={`${
+              this.state.showClass === "display-none"
+                ? "display-block"
+                : "display-none"
+            }`}
+          >
+            <div>
+              <img
+                src="https://img.freepik.com/vetores-gratis/fundo-do-menu-saudavel_23-2147516968.jpg?size=338&ext=jpg"
+                alt=""
+                style={{ margin: "auto", display: "flex", marginTop: "60px" }}
+              />
+            </div>
+          </Col>
+          <Col
+            md="6"
+            className={`${this.state.showClass}`}
+            style={{ marginTop: "35px" }}
+          >
             <Badge color="warning">CAfé da Manhã</Badge>
             <Table size="sm">
               <thead />

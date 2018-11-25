@@ -16,7 +16,10 @@ import {
   CardBody,
   CardLink,
   CardTitle,
-  CardSubtitle
+  CardSubtitle,
+  FormGroup,
+  Label,
+  Input
 } from "reactstrap";
 
 import mapa from "./../images/map.png";
@@ -32,22 +35,37 @@ class MapaCompra extends React.Component<AllProps> {
             <Col md={{ size: 6, offset: 3 }}>
               <div>
                 <Card>
-                  <CardBody>
-                    <CardTitle>Pontos de Vendas</CardTitle>
-                    <CardSubtitle>Proximos a Você</CardSubtitle>
-                  </CardBody>
                   <img width="100%" src={mapa} alt="Card image cap" />
                   <CardBody>
                     <CardText>
                       Os Alimentos ficam sujeitos a serem vendidos antes que
                       você chegue no local.
                     </CardText>
-                    <Link to="/">
-                      <Button color="success">Comprar</Button>
-                    </Link>
-                    <Link to="/">
-                      <Button color="danger">Voltar</Button>
-                    </Link>
+                    <div className="container-fluid">
+                      <FormGroup>
+                        <Label for="exampleSelect">
+                          Selecionar Estabelecimento
+                        </Label>
+                        <Input
+                          type="select"
+                          name="select"
+                          id="exampleSelect"
+                          style={{ width: "400px" }}
+                        >
+                          <option>Walmart - Bela Vista SP</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </Input>
+                      </FormGroup>
+                      <Link to="/">
+                        <Button color="success">Comprar</Button>
+                      </Link>
+                      <Link to="/" style={{ marginLeft: "10px" }}>
+                        <Button color="danger">Voltar</Button>
+                      </Link>
+                    </div>
                   </CardBody>
                 </Card>
               </div>
