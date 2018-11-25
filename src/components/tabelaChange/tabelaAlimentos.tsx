@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 
 // import { Col, Row, Container } from "reactstrap";
-import { IApplicationState, IConnectedReduxProps } from "../store";
+// tslint:disable-next-line:no-duplicate-imports
 import { RouteComponentProps } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -369,6 +369,12 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
             >
               <Col md="5">
                 <div className="display-grid">
+                  <Link to="/mapacompra">
+                    <Button color="primary">Imprimir</Button>
+                  </Link>
+                  <Link to="/timeline">
+                    <Button color="success">Salvar Consumo do Dia</Button>
+                  </Link>
                   <Link to="/mapacompra">
                     <Button color="danger">Não sabe aonde comprar?</Button>
                   </Link>

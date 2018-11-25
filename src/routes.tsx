@@ -4,6 +4,7 @@ import Header from "./components/layout/Header";
 import Institutional from "./pages/institutional";
 import VoceVoluntario from "./pages/vocevoluntario";
 import MapaCompra from "./pages/MapaCompra";
+import TimeLine from "./pages/timeline";
 
 import Cadastro from "./pages/cadastro";
 
@@ -32,6 +33,7 @@ const Routes: React.SFC = () => (
       <Route path="/cadastro" component={Cadastro} />
       <Route path="/voce-voluntario" component={VoceVoluntario} />
       <Route path="/mapacompra" component={MapaCompra} />
+      <Route path="/timeline" component={TimeLine} />
 
       {/*<Route path="/teams" component={TeamsPage} />
       <Route path="/home" component={IndexPage} /> */}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 // import { Col, Row, Container } from "reactstrap";
 import { IApplicationState, IConnectedReduxProps } from "../store";
+// tslint:disable-next-line:no-duplicate-imports
 import { RouteComponentProps } from "react-router-dom";
 import { connect } from "react-redux";
 

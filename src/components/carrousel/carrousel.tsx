@@ -27,9 +27,9 @@ class Carrousel extends React.Component<{}> {
       <div>
         <Row>
           <Col md={6} className="pt-5 offset-md-3">
-            <h3 className="carrousel-h3">Mãe Terra, Faz bem.</h3>
+            <h3 className="carrousel-h3">Seja Natural, e um</h3>
             <br />
-            <h3 className="carrousel-h3">Seja um apoiador da causa.</h3>
+            <h3 className="carrousel-h3">Apoiador da causa, Faz bem</h3>
             <span />
           </Col>
           <Col md={6}>
