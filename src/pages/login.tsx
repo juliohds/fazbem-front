@@ -42,6 +42,18 @@ class Login extends React.Component<AllProps> {
                 <Link to="/">
                   <Button className="mt-10 corDefault">Login</Button>
                 </Link>
+                <img
+                  src="https://www.freeiconspng.com/uploads/facebook-sign-in-button-png-26.png"
+                  alt=""
+                  width="200"
+                  style={{ marginTop: "7px" }}
+                />
+                <img
+                  src="https://www.c-learning.net/storage/app/media/img/buttons/google-login-button.png"
+                  alt=""
+                  width="200"
+                  style={{ marginTop: "7px" }}
+                />
               </form>
             </Col>
           </Row>

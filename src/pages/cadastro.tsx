@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
+
 // import { Col, Row, Container } from "reactstrap";
 import { IApplicationState, IConnectedReduxProps } from "../store";
 import { RouteComponentProps } from "react-router-dom";
@@ -20,26 +22,58 @@ class Cadastro extends React.Component<AllProps> {
             <Col md={{ size: 8, offset: 2 }}>
               <div className="text-center">
                 <h1 className="carrousel-h3" style={{ display: "block" }}>
-                  Seja Bem Vindo
+                  Cadastre-se
                 </h1>
                 <br />
               </div>
               <form className="form">
+                <label htmlFor="nome">Nome</label>
                 <input
                   type="text"
-                  placeholder="Login"
+                  placeholder="Nome"
+                  name="nome"
                   className="form-control"
                 />
                 <br />
+                <label htmlFor="nome">Email</label>
+                <input
+                  type="text"
+                  placeholder="Email"
+                  name="nome"
+                  className="form-control"
+                />
+                <br />
+                <label htmlFor="password">Senha</label>
                 <input
                   type="password"
+                  name="password"
                   placeholder="Senha"
                   className="form-control"
                 />
                 <br />
-                <Button className="mt-10 corDefault" onClick={this.goToHome}>
-                  Login
-                </Button>
+                <label htmlFor="Confirmpassword">Confirmar Senha</label>
+                <input
+                  type="password"
+                  name="Confirmpassword"
+                  placeholder="Senha"
+                  className="form-control"
+                />
+                <br />
+                <Link to="/">
+                  <Button className="mt-10 corDefault">Cadastrar</Button>
+                </Link>
+                <img
+                  src="https://www.freeiconspng.com/uploads/facebook-sign-in-button-png-26.png"
+                  alt=""
+                  width="200"
+                  style={{ marginTop: "7px" }}
+                />
+                <img
+                  src="https://www.c-learning.net/storage/app/media/img/buttons/google-login-button.png"
+                  alt=""
+                  width="200"
+                  style={{ marginTop: "7px" }}
+                />
               </form>
             </Col>
           </Row>
