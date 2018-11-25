@@ -24,7 +24,9 @@ class InstitutionalPage extends React.Component<AllProps> {
         <Row className={"mt-50"}>
           <Col xs="12">
             {/* <Timeline /> */}
-            <TabelaAlimentos />
+            <div className="max-widht-80">
+              <TabelaAlimentos />
+            </div>
           </Col>
         </Row>
 

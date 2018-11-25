@@ -6,25 +6,254 @@ import { IApplicationState, IConnectedReduxProps } from "../store";
 import { RouteComponentProps } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { Button, Col, Row, Table, Badge } from "reactstrap";
+import {
+  Button,
+  Col,
+  Row,
+  Table,
+  Badge,
+  FormGroup,
+  Label,
+  Input
+} from "reactstrap";
 
-type AllProps = RouteComponentProps<{}> & IConnectedReduxProps;
+interface IState {
+  modal: boolean;
+  showClass: string;
+}
 
-class TabelaAlimentos extends React.Component<AllProps> {
-  goToHome() {
-    window.open("/");
+interface IProps {
+  modal: boolean;
+}
+
+class TabelaAlimentos extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props);
+    this.state = {
+      modal: false,
+      showClass: "display-none"
+    };
   }
+
+  openTable() {
+    if (this.state.showClass === "display-none") {
+      this.setState({
+        showClass: "display-block"
+      });
+    }
+  }
+
   public render() {
     return (
       <div className="">
         <Row>
+          <Col md="12">Restricao alimentar?</Col>
+        </Row>
+        <Badge color="warning">CAfé da Manhã</Badge>
+        <Row>
           <Col md="6">
-            <Badge color="warning">CAfé da Manhã</Badge>
-            <Badge color="sucess">Almoço</Badge>
-            <Badge color="danger">Janta</Badge>
-            <div>form</div>
+            <Row>
+              <Col md={6}>
+                <FormGroup>
+                  <Label for="exampleEmail">Alimento</Label>
+                  <Input
+                    type="email"
+                    name="email"
+                    id="exampleEmail"
+                    placeholder="2 Pães"
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Label for="quantidade">Peso</Label>
+                  <Input
+                    type="text"
+                    name="quantidade"
+                    id="quantidade"
+                    placeholder="300g"
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Label for="examplePassword">Valor</Label>
+                  <Input
+                    type="text"
+                    name="valor"
+                    id="valor"
+                    placeholder="R$ 12,00"
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <FormGroup>
+                  <Input
+                    type="email"
+                    name="email"
+                    id="exampleEmail"
+                    placeholder="2 Pães"
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="quantidade"
+                    id="quantidade"
+                    placeholder="300g"
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="valor"
+                    id="valor"
+                    placeholder="R$ 12,00"
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+
+            <Badge color="danger">Almoço</Badge>
+            <Row>
+              <Col md={6}>
+                <FormGroup>
+                  <Input
+                    type="email"
+                    name="email"
+                    id="exampleEmail"
+                    placeholder="2 Pães"
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="quantidade"
+                    id="quantidade"
+                    placeholder="300g"
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="valor"
+                    id="valor"
+                    placeholder="R$ 12,00"
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <FormGroup>
+                  <Input
+                    type="email"
+                    name="email"
+                    id="exampleEmail"
+                    placeholder="2 Pães"
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="quantidade"
+                    id="quantidade"
+                    placeholder="300g"
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="valor"
+                    id="valor"
+                    placeholder="R$ 12,00"
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+
+            <Badge color="success">Janta</Badge>
+            <Row>
+              <Col md={6}>
+                <FormGroup>
+                  <Input
+                    type="email"
+                    name="email"
+                    id="exampleEmail"
+                    placeholder="2 Pães"
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="quantidade"
+                    id="quantidade"
+                    placeholder="300g"
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="valor"
+                    id="valor"
+                    placeholder="R$ 12,00"
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <FormGroup>
+                  <Input
+                    type="email"
+                    name="email"
+                    id="exampleEmail"
+                    placeholder="2 Pães"
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="quantidade"
+                    id="quantidade"
+                    placeholder="300g"
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="valor"
+                    id="valor"
+                    placeholder="R$ 12,00"
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
           </Col>
-          <Col md="6">
+
+          <Col md="6" className={`${this.state.showClass}`}>
             <Badge color="warning">CAfé da Manhã</Badge>
             <Table size="sm">
               <thead />
@@ -81,6 +310,16 @@ class TabelaAlimentos extends React.Component<AllProps> {
                 </tr>
               </tbody>
             </Table>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md="6">
+            <div className="display-grid">
+              <Button color="primary" onClick={this.openTable}>
+                Ver Versão Saudavel
+              </Button>
+            </div>
           </Col>
         </Row>
       </div>
