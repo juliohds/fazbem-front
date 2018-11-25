@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Link } from "react-router-dom";
 
-import { Row, Col, Container } from "reactstrap";
+import { Row, Col, Container, Alert } from "reactstrap";
 
 import mapa from "./../images/map.png";
 
@@ -10,13 +10,13 @@ export default class TimeLine extends React.Component {
   render() {
     return (
       <Container fluid={true} className="institutional-background">
-        <Row>
+        <Row className="mt-50">
           <Col xs="12">
-            <div>
-              <div>
-                <h2>julio</h2>
+            <div className="">
+              <h3 style={{ marginTop: "-50px" }} />
+              <div className="">
                 <iframe
-                  src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1TSMbaBQLvwJvNtkah-Vke4aCYl2hP6RUY90g6C7dF-k&font=Default&lang=en&initial_zoom=2&height=650"
+                  src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=144xWa4hcT31VpEiYRw64GL8CjTRa9IFTeO569IalwQs&font=Default&lang=en&initial_zoom=2&height=650"
                   width="100%"
                   height="650"
                   webkitallowfullscreen={true}
