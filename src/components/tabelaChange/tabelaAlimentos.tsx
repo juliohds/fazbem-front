@@ -47,7 +47,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
   public render() {
     return (
       <div className="">
-        <div>
+        {/* <div>
           <Row>
             <Col md="12">
               Restricao alimentar?{" "}
@@ -60,7 +60,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
               />
             </Col>
           </Row>
-        </div>
+        </div> */}
         <Row>
           <Col md="6" className="text-center">
             <Badge
@@ -319,7 +319,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                 </tr>
                 <tr>
                   <th scope="row">3</th>
-                  <td>Crepeoca</td>
+                  <td>Iorgute</td>
                   <td>tomate</td>
                   <td>R$6,00</td>
                 </tr>
@@ -339,7 +339,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                 <tr>
                   <th scope="row">3</th>
                   <td>Crepeoca</td>
-                  <td>tomate</td>
+                  <td>tomate e salada</td>
                   <td>R$6,00</td>
                 </tr>
               </tbody>
@@ -351,8 +351,8 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
               <tbody>
                 <tr>
                   <th scope="row">1</th>
-                  <td>2x Torradas</td>
-                  <td>Chá</td>
+                  <td>Arroz Integral</td>
+                  <td>Suco</td>
                   <td>R$5,00</td>
                 </tr>
                 <tr>

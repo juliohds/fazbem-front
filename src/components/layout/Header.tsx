@@ -12,7 +12,7 @@ import {
   setIsOpen,
   setLogged
 } from "../../store/layout/actions";
-import logo from "../../images/logo.jpg";
+import logo from "../../images/logo.png";
 import { LoggedNavbar, UnLoggedNavbar } from "./navbar/navbar";
 
 type AllProps = IHeaderPropsFromState & IHeaderPropsFromDispatch;
@@ -33,7 +33,7 @@ class Header extends React.Component<AllProps> {
               <NavbarToggler onClick={this.toggle} />
               <NavbarBrand className="mr-auto" href="/">
                 {/* {this.state.home !== "notfound" && */}
-                {/* <img src={logo} alt="Em Dia" className="header-brand-img" /> */}
+                <img src={logo} alt="Em Dia" className="header-brand-img" />
                 {/* } */}
                 {/* {this.state.home === "notfound" && */}
                 {/* <img src={logoEmdiaN} alt="Em Dia" className="header-brand-img" /> */}
