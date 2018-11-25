@@ -328,9 +328,9 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
             >
               <Col md="5">
                 <div className="display-grid">
-                  <Button color="danger" onClick={this.openTable}>
-                    Não sabe aonde comprar?
-                  </Button>
+                  <Link to="/mapacompra">
+                    <Button color="danger">Não sabe aonde comprar?</Button>
+                  </Link>
                 </div>
               </Col>
             </Row>
