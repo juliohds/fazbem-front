@@ -30,10 +30,7 @@ class InstitutionalPage extends React.Component<AllProps> {
           </Col>
         </Row>
 
-        <Row>
-          {/* <VideoIntro /> */}
-          video
-        </Row>
+        <Row>{/* <VideoIntro /> */}</Row>
 
         <Row>{/* <Dicas /> */}</Row>
 
