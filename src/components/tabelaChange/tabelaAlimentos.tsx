@@ -33,6 +33,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
       modal: false,
       showClass: "display-none"
     };
+    this.openTable = this.openTable.bind(this);
   }
 
   openTable() {
@@ -46,9 +47,20 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
   public render() {
     return (
       <div className="">
-        <Row>
-          <Col md="12">Restricao alimentar?</Col>
-        </Row>
+        <div>
+          <Row>
+            <Col md="12">
+              Restricao alimentar?{" "}
+              <Input
+                type="text"
+                name="valor"
+                id="valor"
+                placeholder="Alergia, Diabetes, Glutem"
+                className="mb-10"
+              />
+            </Col>
+          </Row>
+        </div>
         <Badge color="warning">CAfé da Manhã</Badge>
         <Row>
           <Col md="6">
@@ -310,14 +322,25 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                 </tr>
               </tbody>
             </Table>
+
+            <Row
+              style={{ float: "right", marginTop: "20px", marginRight: "20px" }}
+            >
+              <Col md="5">
+                <div className="display-grid">
+                  <Button color="danger" onClick={this.openTable}>
+                    Não sabe aonde comprar?
+                  </Button>
+                </div>
+              </Col>
+            </Row>
           </Col>
         </Row>
-
         <Row>
           <Col md="6">
             <div className="display-grid">
               <Button color="primary" onClick={this.openTable}>
-                Ver Versão Saudavel
+                Alimentos equivalentes
               </Button>
             </div>
           </Col>

@@ -26,14 +26,11 @@ class Carrousel extends React.Component<{}> {
     return (
       <div>
         <Row>
-          <Col md={6} className="pt-5">
+          <Col md={6} className="pt-5 offset-md-3">
             <h3 className="carrousel-h3">Mãe Terra, Faz bem.</h3>
             <br />
             <h3 className="carrousel-h3">Seja um apoiador da causa.</h3>
-            <span>
-              "Estamos aqui para democratizar o consumo de produtos naturais e
-              organicos"
-            </span>
+            <span />
           </Col>
           <Col md={6}>
             <img className="carrousel-bg" src={items[0].foto} />
