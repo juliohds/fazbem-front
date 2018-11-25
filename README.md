@@ -1,29 +1,21 @@
-# react-redux-typescript-example
+# ALIMENTOS DEMOCRÁTICOS
 
-> Demonstrating the common patterns when using React, Redux v4, and TypeScript.
+## PROBLEMA
 
-Welcome to the Redux 4 + TypeScript 2.9 example! This example site shows you the ideal
-project structure, recommended libraries, as well as design pattern on writing type-safe
-React + Redux app with TypeScript.
+Os hábitos de consumo modernos muitas vezes nos fecham em bolhas que fazem com que o consumo seja muito repetitivo. Nos cerceando para consumir apenas produtos de massa extremamente populares.
 
-This project is intended as a supplement to [this post](https://resir014.xyz/posts/2018/07/06/redux-4-plus-typescript/). To demonstrate it, I created a website which pulls data from the [OpenDota API](https://docs.opendota.com), and display information like professional teams, heroes, as well as top players by hero. This will also demonstrate how to structure your stores for each feature/module in a Redux-enabled app.
+## PROJETO
 
-This project was bootstrapped with <http://github.com/sw-yx/create-react-app-parcel>.
+Nosso objetivo é fomentar a liberdade de escolha através do acesso a informação nutricional. Gerando empoderamento através da informação tornando a escolha pela alimentação mais democrática e acessível.
 
-## Getting started
+## PERSONA
 
-A Node.js 8.0.0+ setup with [yarn](https://yarnpkg.com/) is recommended.
+Persona 1
 
-```bash
-# install dependencies
-yarn
 
-# ...or if you'd like to use npm instead
-npm install
+## MAPA DE EMPATIA, BUSINESS MODEL CANVAS E PRODUCT VALUE CANVAS
 
-# serve with hot reload at localhost:1234
-yarn start
+## DIFERENCIAÇÃO
 
-# build for production
-yarn build
-```
+- Democratização da informação
+- Facilitar a compra de produtos orgânicos
