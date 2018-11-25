@@ -94,18 +94,18 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="email"
                     name="email"
                     id="exampleEmail"
-                    placeholder="2 Pães"
+                    placeholder="Pães"
                   />
                 </FormGroup>
               </Col>
               <Col md={3}>
                 <FormGroup>
-                  <Label for="quantidade">Peso</Label>
+                  <Label for="quantidade">Peso - Quantidade</Label>
                   <Input
                     type="text"
                     name="quantidade"
                     id="quantidade"
-                    placeholder="300g"
+                    placeholder="2"
                   />
                 </FormGroup>
               </Col>
@@ -128,7 +128,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="email"
                     name="email"
                     id="exampleEmail"
-                    placeholder="2 Pães"
+                    placeholder="Café com Leite"
                   />
                 </FormGroup>
               </Col>
@@ -138,7 +138,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="text"
                     name="quantidade"
                     id="quantidade"
-                    placeholder="300g"
+                    placeholder="150 ml"
                   />
                 </FormGroup>
               </Col>
@@ -148,7 +148,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="text"
                     name="valor"
                     id="valor"
-                    placeholder="R$ 12,00"
+                    placeholder="R$ 6,00"
                   />
                 </FormGroup>
               </Col>
@@ -162,7 +162,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="email"
                     name="email"
                     id="exampleEmail"
-                    placeholder="2 Pães"
+                    placeholder="Arroz"
                   />
                 </FormGroup>
               </Col>
@@ -182,7 +182,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="text"
                     name="valor"
                     id="valor"
-                    placeholder="R$ 12,00"
+                    placeholder="R$ 10,00"
                   />
                 </FormGroup>
               </Col>
@@ -194,7 +194,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="email"
                     name="email"
                     id="exampleEmail"
-                    placeholder="2 Pães"
+                    placeholder="Frango"
                   />
                 </FormGroup>
               </Col>
@@ -214,7 +214,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="text"
                     name="valor"
                     id="valor"
-                    placeholder="R$ 12,00"
+                    placeholder="R$ 9,00"
                   />
                 </FormGroup>
               </Col>
@@ -228,7 +228,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="email"
                     name="email"
                     id="exampleEmail"
-                    placeholder="2 Pães"
+                    placeholder="2 Esfiras"
                   />
                 </FormGroup>
               </Col>
@@ -238,7 +238,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="text"
                     name="quantidade"
                     id="quantidade"
-                    placeholder="300g"
+                    placeholder="600g"
                   />
                 </FormGroup>
               </Col>
@@ -248,7 +248,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="text"
                     name="valor"
                     id="valor"
-                    placeholder="R$ 12,00"
+                    placeholder="R$ 21,00"
                   />
                 </FormGroup>
               </Col>
@@ -260,7 +260,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="email"
                     name="email"
                     id="exampleEmail"
-                    placeholder="2 Pães"
+                    placeholder="Coca-cola"
                   />
                 </FormGroup>
               </Col>
@@ -270,7 +270,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="text"
                     name="quantidade"
                     id="quantidade"
-                    placeholder="300g"
+                    placeholder="1L"
                   />
                 </FormGroup>
               </Col>
@@ -280,7 +280,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
                     type="text"
                     name="valor"
                     id="valor"
-                    placeholder="R$ 12,00"
+                    placeholder="R$ 6,00"
                   />
                 </FormGroup>
               </Col>
@@ -365,17 +365,22 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
             </Table>
 
             <Row
-              style={{ float: "right", marginTop: "20px", marginRight: "20px" }}
+              style={{
+                float: "right",
+                marginTop: "20px",
+                marginRight: "20px",
+                width: "105%"
+              }}
             >
-              <Col md="5">
-                <div className="display-grid">
-                  <Link to="/mapacompra">
-                    <Button color="primary">Imprimir</Button>
+              <Col md="12">
+                <div className="">
+                  <Link to="/mapacompra" style={{ marginLeft: "60px" }}>
+                    <Button color="secondary">Imprimir</Button>
                   </Link>
-                  <Link to="/timeline">
-                    <Button color="success">Salvar Consumo do Dia</Button>
+                  <Link to="/timeline" style={{ marginLeft: "5px" }}>
+                    <Button color="success">Salvar Consumo</Button>
                   </Link>
-                  <Link to="/mapacompra">
+                  <Link to="/mapacompra" style={{ marginLeft: "5px" }}>
                     <Button color="danger">Não sabe aonde comprar?</Button>
                   </Link>
                 </div>
@@ -384,7 +389,7 @@ class TabelaAlimentos extends React.Component<IProps, IState> {
           </Col>
         </Row>
         <Row>
-          <Col md="6">
+          <Col md={{ size: 3, offset: 1 }}>
             <div className="display-grid">
               <Button color="primary" onClick={this.openTable}>
                 Alimentos equivalentes
