@@ -1,5 +1,10 @@
-export default function callApi(method: string, url: string, path: string, data?: any) {
-  return fetch(`${url}/api${path}`, {
+export default function callApi(
+  method: string,
+  url: string,
+  path: string,
+  data?: any
+) {
+  return fetch(`${url}/${path}`, {
     method,
     headers: {
       Accept: "application/json",

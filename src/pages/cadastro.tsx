@@ -5,6 +5,7 @@ import { Link, RouteComponentProps } from "react-router-dom";
 import { IApplicationState, IConnectedReduxProps } from "../store";
 
 import { connect } from "react-redux";
+import callApi from "./../utils/callApi";
 
 import { Button, Col, Row } from "reactstrap";
 
@@ -46,6 +47,13 @@ class Cadastro extends React.Component<IProps, IState> {
       senha: this.senha.current!.value
     };
     console.log(data);
+
+    const promise = callApi("POST", "http://127.0.0.1:8000/", "/user", data);
+
+    // tslint:disable-next-line:ter-arrow-parens
+    promise.then(res => {
+      console.log(res);
+    });
   }
 
   public render() {
