@@ -68,7 +68,7 @@ export const UnLoggedNavbar: React.SFC = () => (
       </NavItem>
       <NavItem className="header-li">
         <NavLink className="header-item-text" to="/voce-voluntario">
-          VOCÊ VOLUNTÁRIO
+          SEJA UM EMBAIXADOR
         </NavLink>
       </NavItem>
       <UncontrolledDropdown inNavbar={true}>

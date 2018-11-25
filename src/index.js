@@ -10,3 +10,4 @@ const initialState = window.initialReduxState;
 const store = configureStore(history, initialState);
 ReactDOM.render(<Main store={store} history={history} />, document.getElementById("root"));
 serviceWorker.unregister();
+
