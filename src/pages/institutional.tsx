@@ -4,6 +4,7 @@ import { IApplicationState, IConnectedReduxProps } from "../store";
 import { RouteComponentProps } from "react-router-dom";
 import { connect } from "react-redux";
 import Carrousel from "../components/carrousel/carrousel";
+import TabelaAlimentos from "../components/tabelaChange/tabelaAlimentos";
 
 // Combine both state + dispatch props - as well as any props we; want; to; pass - in a; union; type.;
 type AllProps = RouteComponentProps<{}> & IConnectedReduxProps;
@@ -20,10 +21,10 @@ class InstitutionalPage extends React.Component<AllProps> {
           </Col>
         </Row>
 
-        <Row>
+        <Row className={"mt-50"}>
           <Col xs="12">
             {/* <Timeline /> */}
-            timeline
+            <TabelaAlimentos />
           </Col>
         </Row>
 
@@ -32,14 +33,10 @@ class InstitutionalPage extends React.Component<AllProps> {
           video
         </Row>
 
-        <Row>
-          {/* <Dicas /> */}
-        </Row>
+        <Row>{/* <Dicas /> */}</Row>
 
         <Row className="institutional-footer">
-          <Col xs="12" >
-            {/* <Footer home={true} /> */}
-          </Col>
+          <Col xs="12">{/* <Footer home={true} /> */}</Col>
         </Row>
       </Container>
     );
