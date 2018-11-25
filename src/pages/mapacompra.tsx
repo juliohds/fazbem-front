@@ -32,7 +32,7 @@ class MapaCompra extends React.Component<AllProps> {
       <div className="wrapper">
         <div className="mt-100">
           <Row>
-            <Col md={{ size: 6, offset: 3 }}>
+            <Col md={{ size: 12, offset: 0 }}>
               <div>
                 <Card>
                   <img width="100%" src={mapa} alt="Card image cap" />
@@ -41,31 +41,64 @@ class MapaCompra extends React.Component<AllProps> {
                       Os Alimentos ficam sujeitos a serem vendidos antes que
                       você chegue no local.
                     </CardText>
-                    <div className="container-fluid">
-                      <FormGroup>
-                        <Label for="exampleSelect">
-                          Selecionar Estabelecimento
-                        </Label>
-                        <Input
-                          type="select"
-                          name="select"
-                          id="exampleSelect"
-                          style={{ width: "400px" }}
-                        >
-                          <option>Walmart - Bela Vista SP</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </Input>
-                      </FormGroup>
-                      <Link to="/">
-                        <Button color="success">Comprar</Button>
-                      </Link>
-                      <Link to="/" style={{ marginLeft: "10px" }}>
-                        <Button color="danger">Voltar</Button>
-                      </Link>
-                    </div>
+                    <Row>
+                      <Col md={{ size: 4, offset: 2 }}>
+                        <div className="container-fluid">
+                          <FormGroup>
+                            <Label for="exampleSelect">
+                              Selecionar Supermecado
+                            </Label>
+                            <Input
+                              type="select"
+                              name="select"
+                              id="exampleSelect"
+                              style={{ width: "400px" }}
+                            >
+                              <option>Walmart - Bela Vista SP</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </Input>
+                          </FormGroup>
+
+                          <Link to="/">
+                            <Button color="success">Comprar</Button>
+                          </Link>
+                          <Link to="/" style={{ marginLeft: "10px" }}>
+                            <Button color="danger">Voltar</Button>
+                          </Link>
+                        </div>
+                      </Col>
+                      <Col md="6">
+                        <div className="container-fluid">
+                          <FormGroup>
+                            <Label for="exampleSelect">
+                              Comprar de Produtor
+                            </Label>
+                            <Input
+                              type="select"
+                              name="select"
+                              id="exampleSelect"
+                              style={{ width: "400px" }}
+                            >
+                              <option>João Mauricio Alves</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </Input>
+                          </FormGroup>
+
+                          <Link to="/">
+                            <Button color="primary">Buscar</Button>
+                          </Link>
+                          <Link to="/" style={{ marginLeft: "10px" }}>
+                            <Button color="danger">Voltar</Button>
+                          </Link>
+                        </div>
+                      </Col>
+                    </Row>
                   </CardBody>
                 </Card>
               </div>
