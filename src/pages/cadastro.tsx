@@ -8,12 +8,46 @@ import { connect } from "react-redux";
 
 import { Button, Col, Row } from "reactstrap";
 
+interface IState {
+  nome: string;
+  email: string;
+  senha: string;
+}
+
+interface IProps {
+  modal: boolean;
+}
+
 type AllProps = RouteComponentProps<{}> & IConnectedReduxProps;
 
-class Cadastro extends React.Component<AllProps> {
+class Cadastro extends React.Component<IProps, IState> {
+  private nome = React.createRef<HTMLInputElement>();
+  private email = React.createRef<HTMLInputElement>();
+  private senha = React.createRef<HTMLTextAreaElement>();
+
+  constructor(props: IProps) {
+    super(props);
+    this.state = {
+      nome: "",
+      email: "",
+      senha: ""
+    };
+    this.cadastrar = this.cadastrar.bind(this);
+  }
+
   goToHome() {
     window.open("/");
   }
+
+  cadastrar() {
+    const data = {
+      nome: this.nome.current!.value,
+      email: this.email.current!.value,
+      senha: this.senha.current!.value
+    };
+    console.log(data);
+  }
+
   public render() {
     return (
       <div className="wrapper">
@@ -33,6 +67,8 @@ class Cadastro extends React.Component<AllProps> {
                   placeholder="Nome"
                   name="nome"
                   className="form-control"
+                  ref={this.nome}
+                  value=""
                 />
                 <br />
                 <label htmlFor="nome">Email</label>
@@ -41,14 +77,20 @@ class Cadastro extends React.Component<AllProps> {
                   placeholder="Email"
                   name="nome"
                   className="form-control"
+                  id="cad_email"
+                  ref={this.email}
+                  value=""
                 />
                 <br />
                 <label htmlFor="password">Senha</label>
                 <input
                   type="password"
                   name="password"
+                  ref={this.senha}
                   placeholder="Senha"
                   className="form-control"
+                  id="cad_senha"
+                  value=""
                 />
                 <br />
                 <label htmlFor="Confirmpassword">Confirmar Senha</label>
@@ -57,11 +99,14 @@ class Cadastro extends React.Component<AllProps> {
                   name="Confirmpassword"
                   placeholder="Senha"
                   className="form-control"
+                  value=""
                 />
                 <br />
-                <Link to="/">
-                  <Button className="mt-10 corDefault">Cadastrar</Button>
-                </Link>
+
+                <Button className="mt-10 corDefault" onClick={this.cadastrar}>
+                  Cadastrar
+                </Button>
+
                 <img
                   src="https://www.freeiconspng.com/uploads/facebook-sign-in-button-png-26.png"
                   alt=""
