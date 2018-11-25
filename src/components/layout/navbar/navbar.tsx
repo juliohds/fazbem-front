@@ -89,7 +89,7 @@ export const UnLoggedNavbar: React.SFC = () => (
         </DropdownMenu>
       </UncontrolledDropdown>
       <NavItem className="header-li">
-        <NavLink className="header-item-text" to="/cadastre-se">
+        <NavLink className="header-item-text" to="/cadastro">
           CADASTRE-SE
         </NavLink>
       </NavItem>

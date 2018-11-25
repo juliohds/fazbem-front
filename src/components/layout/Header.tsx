@@ -33,7 +33,7 @@ class Header extends React.Component<AllProps> {
               <NavbarToggler onClick={this.toggle} />
               <NavbarBrand className="mr-auto" href="/">
                 {/* {this.state.home !== "notfound" && */}
-                <img src={logo} alt="Em Dia" className="header-brand-img" />
+                {/* <img src={logo} alt="Em Dia" className="header-brand-img" /> */}
                 {/* } */}
                 {/* {this.state.home === "notfound" && */}
                 {/* <img src={logoEmdiaN} alt="Em Dia" className="header-brand-img" /> */}

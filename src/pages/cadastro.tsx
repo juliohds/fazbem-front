@@ -1,6 +1,4 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
-
 // import { Col, Row, Container } from "reactstrap";
 import { IApplicationState, IConnectedReduxProps } from "../store";
 import { RouteComponentProps } from "react-router-dom";
@@ -10,7 +8,7 @@ import { Button, Col, Row } from "reactstrap";
 
 type AllProps = RouteComponentProps<{}> & IConnectedReduxProps;
 
-class Login extends React.Component<AllProps> {
+class Cadastro extends React.Component<AllProps> {
   goToHome() {
     window.open("/");
   }
@@ -39,9 +37,9 @@ class Login extends React.Component<AllProps> {
                   className="form-control"
                 />
                 <br />
-                <Link to="/">
-                  <Button className="mt-10 corDefault">Login</Button>
-                </Link>
+                <Button className="mt-10 corDefault" onClick={this.goToHome}>
+                  Login
+                </Button>
               </form>
             </Col>
           </Row>
@@ -64,4 +62,4 @@ class Login extends React.Component<AllProps> {
 }
 const mapStateToProps = (state: IApplicationState) => ({});
 
-export default connect(mapStateToProps)(Login);
+export default connect(mapStateToProps)(Cadastro);
